@@ -1,0 +1,15 @@
+function [matFileName] = GetMatFileName(lsmFileName)
+% lsmDescriptors.lsmFileName should include the extension
+%returns the matFileName with the .mat extension.
+matFileName=[];  
+stimID = regexp(lsmFileName,'f\d\dr\d\d[a-z]','match');
+
+% Date will be extracted by recognising 6 numbers together that start with
+% the years 12-19. the code will make computers blow up in the year 2020
+dateStr=regexp(lsmFileName,'201[2-9]\d\d\d\d','match');
+try
+matFileName=[stimID{1}  dateStr{1} '.mat'];
+catch
+errordlg('cannot work out matFileName. make sure the date and stimulus identity are entered correctly eg.f01r01a 120306')
+end
+end
