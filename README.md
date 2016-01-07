@@ -1,22 +1,34 @@
 # Analysis pipeline in Matlab for live-imaging.
 
 This Matlab code which provides:
-*   a convenient workflow to turn raw fluorescent time-series objects, generated from live imaging experiments in  biology, into systematically processed data.
+*   a convenient workflow to turn raw fluorescent time-series objects, generated from live imaging experiments in  biology, into systematically processed data and provides arrange of output formats including graphs and statistical tables.
 * an intuitive user-interface to assess the data according to many descriptive variables.
 
-
-
-!["GUI overview2"](overviewGUI.jpg "pic 2")
+!["GUI overview2"](figures/overviewGUI.jpg "pic 2")
 
 ## Basic workflow
-
-<!-- + Place all the image files for analysis (.lsm format) into a single directory.
-+ Run the `SelectROIs` function. When this function is run for the first time in a directory it converts the image files into .mat files in which the image data and associated metadata is subsequently stored. With user-interaction, this function also saves each region of interest (ROI) for each of the time-series files.
++ Place all the image files for analysis (.lsm format) into a single directory.
++ Run the `SelectROIs` function. When this function is run for the first time in a directory it converts the image files into .mat files in which the image data and associated metadata are subsequently stored. With user-interaction, this function also saves each region of interest (ROI) for each of the time-series files.
 + When all ROIs are saved run the `ConsolidateMatFiles` function to consolidate the data into a single compiled data file.
 + Finally the `FurtherAnalysis` function uses this compiled data file to generate graphs and statistics in an interactive manner. 
- --> 
 
-!["GUI overview3"](scriptOverview.png "pic 3")
+!["script overview"](figures/scriptOverview.png "pic 3")
+
+## The SelectROIs function
+!["file_Selection"](figures/file_Selection.jpg "pic 4")
+
+Using a GUI the user navigates through the time-series in the directory and selects the ones to be used for analysis.
+A heatmap indicates regions that displayed an increase in fluorescence over the course of the time series.
+Upon selection the user is provided with a means to input ROI names, select a background region of the image (in case subsequent background subtraction is desired), select each ROI and finally add any comments specific to that file. 
+Upon subsequent selection of an edited file the user may edit the previously defined metadata or erase it and start again.
+
+## The ConsolidateMatFiles function
+Running this function compiles the .mat files containing all image data into a final file containing only the only the mean fluorescence intensity at each time point for each ROI and the metadata associated with each file. The file is greatly reduced in size and can be used for all subsequent analysis.
+
+## The FurtherAnalysis function
+
+!["descriptive_variables"](figures/descriptive_variables.png "pic 5")
+
 
 <!-- \caption[Menu to navigate through different time-series image files in custom analysis program.]{\textbf{Menu to navigate through different time-series image files}} -->
 
