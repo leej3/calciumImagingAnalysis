@@ -5,7 +5,18 @@ This Matlab code which provides:
 * an intuitive user-interface to assess the data according to many descriptive variables.
 
 
-!["GUI overview"](overviewOfGUI.png "pic 1")
+
+!["GUI overview2"](overviewGUI.jpg "pic 2")
+
+## Basic workflow
+
+<!-- + Place all the image files for analysis (.lsm format) into a single directory.
++ Run the `SelectROIs` function. When this function is run for the first time in a directory it converts the image files into .mat files in which the image data and associated metadata is subsequently stored. With user-interaction, this function also saves each region of interest (ROI) for each of the time-series files.
++ When all ROIs are saved run the `ConsolidateMatFiles` function to consolidate the data into a single compiled data file.
++ Finally the `FurtherAnalysis` function uses this compiled data file to generate graphs and statistics in an interactive manner. 
+ --> 
+
+!["GUI overview3"](scriptOverview.png "pic 3")
 
 <!-- \caption[Menu to navigate through different time-series image files in custom analysis program.]{\textbf{Menu to navigate through different time-series image files}} -->
 
@@ -54,7 +65,7 @@ In the menu presented in Figure~\ref{fig:analysisScriptReviewPic} the 'Select Th
 See figure \ref{mylabel}.
 
 <!-- ./images/lth/analysisScript/analysisScriptPlottingMenu2} -->
-    Caption: Menu to define variables for figure output
+Caption: Menu to define variables for figure output
 
 
 The compiled-data file contains the \%$\Delta$F(t) values for each ROI as well as the associated labels for the data. The program enables the user to output a variety of plots using this file (Examples of these plots can be seen in Chapter~\ref{cha:establishing_an_assay_for_observing_sth} in Figure~\ref{fig:firstExposure} and Figure~\ref{fig:firstExposureDiffSummary}). With the menu depicted in Figure~\ref{fig:analysisScriptPlottingMenu}, the user can define the grouping variables to categorise the data with and the grouping variable to compare across. Accordingly the program cycles through each unique value available for each grouping variable generating an additional plot for each. In addition to this functionality, the user can filter out certain data-points according to these grouping variables. With this range of functionality the program presents a powerful way to assess the data across multiple relevant grouping variables via a graphical user interface. 
