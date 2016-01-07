@@ -4,8 +4,9 @@ This Matlab code which provides:
 *   a convenient workflow to turn raw fluorescent time-series objects, generated from live imaging experiments in  biology, into systematically processed data.
 * an intuitive user-interface to assess the data according to many descriptive variables.
 
-![overview image](https://github.com/leej3/calciumImagingAnalysis/overiewOfGUI.pdf "GUI overview")
-    
+
+!["GUI overview"](overviewOfGUI.png "pic 1")
+
 <!-- \caption[Menu to navigate through different time-series image files in custom analysis program.]{\textbf{Menu to navigate through different time-series image files}} -->
 
 ## Data storage 
