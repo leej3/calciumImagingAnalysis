@@ -4,7 +4,7 @@ disp(fieldsStruct)
 PlotCurvesForEachGroupDefinedInFieldsStruct(userInputSubset, fieldsStruct, analysisArgs)
 PlotShadedFigure(userInputSubset, fieldsStruct, analysisArgs)
 if ~isempty(pairedImagingData)
-summaryBoxPlotsPaired( pairedImagingData, fieldsStruct, analysisArgs)
+    summaryBoxPlotsPaired( pairedImagingData, fieldsStruct, analysisArgs)
 ImagingStats(pairedImagingData, fieldsStruct, analysisArgs)
 else
     disp('no paired data... summary plot for unpaired data...')

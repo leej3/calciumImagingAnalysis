@@ -102,7 +102,7 @@ potentialValuesToUse = {
     'areaUnderCurvePercentChange'
     'End summary plot analysis'
         };
-    userChoice = menu('Choose a measure to output',potentialValuesToUse);
+    userChoice = menu('Output for paired jitter plots:',potentialValuesToUse);
     outputValueToUse = potentialValuesToUse{userChoice};
 
 

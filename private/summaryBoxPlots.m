@@ -81,7 +81,7 @@ potentialValuesToUse = {
     'areaUnderCurve'
     'End summary plot analysis'
         };
-    userChoice = menu('Choose a measure to output',potentialValuesToUse);
+    userChoice = menu('Output for jittered plot:',potentialValuesToUse);
     outputValueToUse = potentialValuesToUse{userChoice};
 
 

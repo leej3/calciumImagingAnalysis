@@ -129,7 +129,7 @@ currentDirectory = cd;userInput = [];
         CreatMatFileDirectoriesIfNecessary(currentDirectory)
         userFolder = currentDirectory;
     catch
-      disp('Default filename not found')
+      disp('Default filename not found. For best results change to the directory containing the appropriate file before running this function')
     end
     if isempty(userInput)
       [userFolder, userInput] = LoadTimeSeriesWithUserInput
